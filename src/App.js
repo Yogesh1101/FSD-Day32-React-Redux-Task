@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import HomePage from "./components/HomePage";
+import CartPage from "./components/CartPage";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        {/* Navigation Bar Component */}
+        <NavBar />
+        {/* Routes is assigned for the components with values passed */}
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/cart" element={<CartPage />}></Route>
+        </Routes>
+      </div>
+    </Provider>
   );
 }
 
