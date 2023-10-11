@@ -1,5 +1,7 @@
             FSD Day-32 React Redux Task
 
+                      Netlify Link : https://fsd-day32-react-redux-task.netlify.app/
+
                       This task satisfies all the requirements mentioned in the document
                           It is responsive and looks good on all screen sizes.
                           
